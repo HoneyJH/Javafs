@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+
+li{
+    list-style: none;
+}
+
+header{
+    width: 1900px;
+    height: 54px;
+    background: lightblue;
+}
+
+.section1{
+    width: 1500px;
+    height: 800px;
+    background: lightcoral;
+    margin: 0 auto;
+}
+
+#flower{
+    width: 1500px;
+    height: 90px;
+    background: lightcyan;
+    margin: 0 auto;
+}
