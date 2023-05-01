@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* 공통 */
+#wrap{
+    /* 가로 가운데 맞춤 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header, #contents, footer{
+    display: flex;
+}
+/* 헤더 */
+
+/* 로고 */
+.logo{
+    width: 200px;
+    height: 100px;
+    background: lightpink;
+}
+/* 내비게이션 */
+nav{
+    width: 1000px;
+    height: 100px;
+    background: lightslategray;
+}
+/* 슬라이드 */
+#slide{
+    height: 300px;
+    background: lightcoral;
+}
+/* 메인 콘텐츠 */
+#contents div{
+    width: 400px;
+    height: 200px;
+}
+.tabs{
+    background: lawngreen;
+}
+.banner{
+    background: darkgreen;
+}
+.shortcut{
+    background: darkkhaki;
+}
+/* 푸터 */
+.b_logo{
+    width: 200px;
+    height: 100px;
+    background: salmon;
+}
+.addr{
+    width: 800px;
+    height: 100px;
+    background: wheat;
+}
+.sns{
+    width: 200px;
+    height: 100px;
+    background: tomato;
+}
