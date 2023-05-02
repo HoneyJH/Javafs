@@ -3,16 +3,50 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+/* border */
+section,footer,section li,#main_img h2{
+    border: 1px solid black;
 }
 
-header,section,footer,li{
-    outline: 1px solid black;
+header:not(nav){
+    border: 1px solid black;
 }
 
-body{
-    color: #000;
-    background: #FFF;
+img{
+    border-bottom: 1px solid black;
+}
+
+#menu img{
+    border: 1px solid black;
+}
+
+#menu li{
+    border: none;
+}
+
+#news img{
+    margin-bottom: 10px;
+    border-top: 1px solid #000;
+}
+
+section,ul,section li{
+    border-bottom: none;
+}
+
+#menu, #main_img{
+    border-top: none;
+}
+
+#menu .lineL{border-left: none;}
+
+#menu .lineR{border-right: none;}
+
+li:nth-of-type(1){
+    border-left: none;
+}
+li:nth-of-type(4){
+    border-right: none;
 }
 
 a{
@@ -26,13 +60,13 @@ li{
 
 /* header */
 header{
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    width: 100%;
+    box-sizing: border-box;
+    /* position: fixed; */
+    /* top: 0; */
+    /* z-index: 99; */
+    /* width: 100%; */
     padding: 0 32px;
     height: 54px;
-    background: #777;
 }
 
 .logo{
@@ -47,7 +81,7 @@ nav li{
     display: inline-block;
     margin: 12px;
 
-    
+
 }
 /* section common */
 section{
@@ -78,15 +112,12 @@ section{
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
-    
-    margin: 8px 24px;
 }
 /* section 2,3 common */
 
 section li{
     float: left;
     width: 362px;
-    margin-bottom: 20px;
 }
 
 section ul::after{
@@ -94,11 +125,13 @@ section ul::after{
     clear: both;
     display: block;
 }
-/* #menu ul, #event ul{
-    overflow: hidden;
-} */
-section li:not(:nth-of-type(4n)){
-    margin-right: 16px;
+
+#menu li:not(:nth-of-type(4n)){
+    margin-right: 15.9px;
+}
+
+#event li:not(:nth-of-type(4n)){
+    margin-right: 14px;
 }
 
 /* section 2 */
@@ -128,6 +161,7 @@ section li:not(:nth-of-type(4n)){
     margin: 8px 0;
 }
 
+/* 이벤트 목록 버튼 디자인 */
 #event li a{
     display: block;
     background: #ccc;
@@ -138,7 +172,7 @@ section li:not(:nth-of-type(4n)){
 /* section 4 */
 
 input{
-    width: 1496px;
+    width: 1484px;
     height: 36px;
     display: block;
     padding-left: 10px;
@@ -146,6 +180,7 @@ input{
     border: 1px solid #cecece;
 }
 
+/* botton style */
 button{
     height: 36px;
     width: 160px;
@@ -164,9 +199,6 @@ button:hover{
 
 /* footer */
 footer{
-    /* height: 81px; */
-    background: #000;
-    color: #fff;
     text-align: center;
     padding: 32px;
 }
