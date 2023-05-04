@@ -1,8 +1,13 @@
 @charset "utf-8";
-
+/* 공통 */
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
 }
 
 a{
@@ -10,47 +15,54 @@ a{
     text-decoration: none;
 }
 
-div{
-    padding: 16px;
+img{
+    height: 100%;
 }
 
-
-li{
-    display: inline-block;
-    margin: 0 8px;
-}
-
+/* header */
 header{
-    box-sizing: border-box;
+    height: 54px;
     position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
     width: 100%;
-    height: 54px;
-    padding: 0 32px;
     background: #fff;
     box-shadow: 0 0 3px 0.01px #000;
-    
 }
 
+header ul{
+    display: flex;
+}
+
+header h1{
+    height: 100%;
+}
+
+
+/* section1 */
 section{
     width: 1496px;
     margin: 0 auto;
 }
 
 .section{
+    position: relative;
+    top: 54px;
     display: flex;
     background: lightcyan;
 }
 
 .section div{
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 }
 
 .section li{
-    margin: 10px;
-    padding: 5px;
+    margin: 10px 0;
+    padding: 5px 0;
     background: lightblue;
     border-radius: 20px;
 }
