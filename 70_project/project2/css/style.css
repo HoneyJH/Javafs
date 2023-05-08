@@ -16,6 +16,7 @@ body{
 
 img {
     width: 100%;
+    border-radius: 10px;
 }
 
 a {
@@ -26,6 +27,10 @@ a {
 /* 목록의 마커 제거 */
 li {
     list-style: none;
+}
+li img{
+    height: 243px;
+    width: 362px;
 }
 
 
@@ -40,6 +45,7 @@ header {
     background: #fff;
     padding: 0 32px;
     height: 54px;
+    box-shadow: 0 0 5px 0.1px #000;
 }
 
 /* 네비게이션 정렬 */
@@ -71,6 +77,8 @@ section {
 /* section 1 */
 #main_img {
     position: relative;
+    height: 810px;
+    background: url(../images/logo.jpg) no-repeat 50% 50%/cover ;
 }
 
 #main_img h2 {
@@ -79,6 +87,9 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
+    background: #000;
+
 }
 
 /* section 2,3 common */
@@ -101,18 +112,13 @@ section li {
 #menu h3 {
     position: absolute;
     padding: 5px;
+    color: #fff;
+    background: #000;
+    border-radius: 10px 0 10px;
 }
 
 #menu li:nth-of-type(1) {
     margin-bottom: 27px;
-}
-
-#menu ul {
-    margin-right: 0.5px;
-}
-
-#menu img {
-    margin-bottom: -5px;
 }
 
 #menu h2 {
