@@ -14,7 +14,7 @@
             transition: 1s;
         }
         div:hover {
-            width: 200px;
+            width: 400px;
         }
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름 */
         .trs1 {transition-timing-function: ease;}
@@ -30,6 +30,8 @@
         /* cubic-bezier(n,n,n,n) */
         /* https://cubic-bezier.com/#.17,.67,.83,.67  */
         .trs6 {transition-timing-function:cubic-bezier(1,-0.01,1,.07);}
+
+        .trs7 {transition-timing-function:cubic-bezier(.04,1.57,.94,-0.35);}
     </style>
 </head>
 <body>
@@ -40,5 +42,7 @@
     <div class="trs4">ease-in-out</div>
     <div class="trs5">linear</div>
     <div class="trs6">cubic-bezier</div>
+    
+    <div class="trs7">cubic-bezier</div>
 </body>
 </html>
