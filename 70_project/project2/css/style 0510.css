@@ -1,0 +1,217 @@
+@charset "utf-8";
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #fff;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* typo */
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #000;
+}
+
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0 32px;
+    height: 54px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12);
+    line-height: 54px;
+}
+
+/* 네비게이션 정렬 */
+nav li {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+h1:hover{
+    background: #ddd;
+}
+nav li:hover{
+    background: #ddd;
+}
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    padding-top: 54px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2+p {
+    margin-bottom: 32px;
+}
+
+/* section 1 */
+#main_img {
+    position: relative;
+    overflow: hidden;
+    height: 810px;
+}
+
+li img{
+    height: 243px;
+    width: 362px;
+}
+
+#main_img h2 {
+    position: absolute;
+    padding: 8px 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: #000000bb;
+}
+
+/* section 2,3 common */
+
+section ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* section 2 */
+#menu {
+    position: relative;
+}
+
+#menu h3 {
+    position: absolute;
+    padding: 5px;
+    color: #fff;
+    background:#000000bb;
+    border-radius: 10px 0 10px;
+}
+
+#menu li:nth-of-type(1) {
+    margin-bottom: 27px;
+}
+
+#menu h2 {
+    margin-bottom: 48px;
+}
+
+/* section 3 */
+#event li h3 {
+    margin: 16px 0 8px;
+}
+
+#event li p {
+    margin: 8px 0;
+}
+
+/* 이벤트 목록 버튼 디자인 */
+#event a {
+    display: block;
+    background: #eee;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+#event a:hover{
+    background: #ccc;
+}
+
+/* section 4 */
+/* input style */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #cecece;
+}
+
+/* botton style */
+button {
+    padding: 12px 16px;
+    margin: 16px 0 54px;
+    border: none;
+    background: #000;
+    color: #fff;
+    }
+    
+button:hover {
+    background-color: #d7d7d7;
+    color: #000;
+}
+.map{
+    height: 830px;
+
+}
+
+/* footer */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px 0;
+}
