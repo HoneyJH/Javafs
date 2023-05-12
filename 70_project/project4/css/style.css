@@ -5,19 +5,19 @@
     padding: 0;
     box-sizing: 0;
 }
-header::after, content::after, footer::after{
-    content: '';
-    clear: both;
-    display: block;
+img{
+    width: 100%;
 }
+
 /* 공통 */
 #wrap{
     /* 가로 가운데 맞춤 */
     width: 1200px;
     margin: 0 auto;
 }
-.logo, nav, #contents div, footer div{
-    float: left;
+
+header, #contents, footer{
+    display: flex;
 }
 /* 헤더 */
 
@@ -36,7 +36,26 @@ nav{
 /* 슬라이드 */
 #slide{
     height: 300px;
+    overflow: hidden;
     background: lightcoral;
+}
+#slide ul{
+    position: relative;
+    display: flex;
+    left: 0;
+    width: 400%;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide {
+    0%{left: 0;}
+    5%{left: -100%;}
+    33%{left: -100%;}
+    38%{left: -200%;}
+    66%{left: -200%;}
+    71%{left: -300%;}
+    99.99%{left: -300%;}
+    100%{left: 0;}
 }
 /* 메인 콘텐츠 */
 #contents div{
