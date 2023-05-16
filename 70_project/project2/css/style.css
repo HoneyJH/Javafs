@@ -165,10 +165,6 @@ section ul {
     position: relative;
 }
 
-#menu img {
-    transition: .5s;
-}
-
 #menu li {
     overflow: hidden;
     height: 243px;
@@ -179,10 +175,14 @@ section ul {
 #menu h3 {
     z-index: 22;
     position: absolute;
-    padding: 5px;
+    padding: 4px 8px;
     color: #fff;
     background: #777777bb;
     border-radius: 10px 0 10px;
+    transition: .5s;
+}
+
+#menu img {
     transition: .5s;
 }
 

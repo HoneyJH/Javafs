@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>변수(let,const)</h1>
+    <script>
+        /* 
+            //변수 선언 키워드 : var -> let,const
+
+            //변수 선언
+            var 변수명;
+
+            //변수 할당
+            변수명 = 값;
+
+            //변수 선언 및 할당
+            var 변수명1 = 값1;
+            var 변수명2 = 값2;
+            var 변수명3 = 값3;
+            
+            var 변수명1 = 값1,변수명2 = 값2,...;
+            
+            //선언과 할당을 따로 할 수 있는 것은? var,let
+            //재선언: var
+            //재할당: var, let
+
+        */
+
+        //const는 선언 동시에 할당도 해야함
+        const box = 100;
+
+        // let은 재할당O 재선언X
+        let box2;
+        box2 = 80;
+        
+        // var은 재할당O 재선언O
+        var box3;
+        box3 = 20;
+        var box3 = 10;
+
+        document.write(box, '<br>');
+        document.write('box','<br><br>');
+
+        document.write(box2, '<br>');
+        document.write('box2','<br><br>');
+
+        document.write(box3, '<br>');
+        document.write('box3','<br>');
+    </script>
+</body>
+
+</html>
