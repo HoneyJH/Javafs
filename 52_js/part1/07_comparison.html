@@ -12,19 +12,67 @@
     <h1>연산자</h1>
     <script>
         /* 
-            비교 연산자: >(초과), <(미만), >=(이상), <=(이하), 
-                        ==(같다), !=(다르다), ===(데이터와 데이터 유형이 모두 같다), 
-                        !==(데이터 또는 데이터 유형이 다르다)
+            비교 연산자: 
+            >(초과), <(미만), >=(이상), <=(이하), 
+            ==(같다),
+            !=(다르다),
+            ===(같다,데이터 유형 포함), 
+            !==(다르다,데이터 유형 포함)
+
+            비교 연산으 ㅣ결과는 true(참) 또는 false(거짓)이다
+
+            10 == 10 -> true
+            10 == '10' -> true
+            10 === '10' -> false
         */
 
         var a = 10;
         var b = 20;
-        var c = 10;
         var f = '20';
         var result;
 
-        document.write(result, '<br>');
+        //문자열의 경우 사전순으로 뒤에 있는 문자를 큰것으로 인식
+        // 문자열과 숫자를 비교 (<,>,<=,>=)하면 false이다.
 
+        result = a > b;
+        document.write(result, '<br>');
+        result = a < b;
+        document.write(result, '<br><br>');
+        
+        //작거나 같다. -> 작다 또는 같다.
+        result = a <= b;
+        document.write(result, '<br>');
+        //크거나 같다. -> 크다 또는 같다.
+        result = a >= b;
+        document.write(result, '<br><br>');
+        
+        result = a != b;
+        document.write(result, '<br>');
+        result = b != f;
+        document.write(result, '<br>');
+        result = b === f;
+        document.write(result, '<br><br>');
+
+        /*
+            표현식 (expression)
+                - 값을 만들어 낼 수 있는 것
+                - 변수, 값(데이터), 연산자의 조합
+
+            5
+            '안녕하세요?'
+            1 + 2
+
+            document.write(변수, '태그 문자열','문자열',숫자,연산식)
+        */
+
+        document.write(10 == 10, '<br>');
+        document.write(10 == '10', '<br><br>');
+
+        document.write(10 != 10, '<br>');
+        document.write(10 != '10', '<br><br>');
+
+        document.write(10 === 10, '<br>');
+        document.write(10 === '10', '<br>');
         
     </script>
 </body>
