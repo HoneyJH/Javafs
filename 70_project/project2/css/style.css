@@ -1,114 +1,23 @@
 @charset "utf-8";
+@import url('reset.css');
+@import url('typo.css');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
-/* reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #fff;
-}
-
-li {
-    list-style: none;
-}
-
-img {
-    width: 100%;
-    vertical-align: top;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* typo */
-html {
-    font-size: 10px;
-}
-
-body {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #000;
-}
-
-h1 {
-    font-size: 3.2rem;
-    font-family: 'Caveat', cursive;
-    font-weight: 400;
-}
-
-h2 {
-    font-size: 2.4rem;
-    font-family: 'Caveat', cursive;
-    font-weight: 400;
-}
-
-#main_img h2 {
-    font-size: 6.8rem;
-}
-
-#main_img:hover h2 {
-    text-shadow: 2px 2px lightpink;
-}
-
-
-h3 {
-    font-size: 1.8rem;
-    font-family: 'Caveat', cursive;
-}
-
-nav li {
-    font-size: 1.8rem;
-    font-family: 'Caveat', cursive;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-}
 
 /* header */
 header {
     position: fixed;
-    top: 0;
     z-index: 999;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     background: #fff;
-    padding: 0 32px;
-    height: 54px;
+    padding: 12px 30px;
     background: linear-gradient(rgba(255, 255, 255, 0.7),
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255)), url(../images/background.jpg);
 }
 
-/* nav */
-nav li {
-    display: inline-block;
-    text-align: center;
-    padding: 17px 17px;
-    line-height: 1;
-}
-
-nav span {
-    display: block;
-    text-indent: -999em;
-    transition: 0.3s;
-    height: 2px;
-    width: 0;
-    background: lightcoral;
+nav {
+    display: none
 }
 
 li:hover span {
@@ -117,64 +26,66 @@ li:hover span {
 
 /* section common */
 section {
-    width: 1496px;
-    margin: 0 auto;
+    padding: 81px 30px 0;
 }
 
 .section h2 {
-    padding-top: 54px;
-    margin-bottom: 16px;
     border-bottom: 1px solid #ccc;
+    line-height: 1;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
-.section h2+p {
-    margin-bottom: 32px;
+.section li {
+    margin-bottom: 16px;
+}
+
+section,
+footer {
+    position: relative;
+    top: 51px;
 }
 
 /* section 1 */
 #main_img {
     position: relative;
-    top: 54px;
     width: 100%;
-    overflow: hidden;
-    height: 810px;
+    height: 500px;
     background: url(../images/logo.png) no-repeat top/contain;
 }
 
 #main_img h2 {
     position: absolute;
-    padding: 8px 16px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #000000;
     transition: .2s;
 }
 
-/* section 2,3 common */
+#main_img:hover h2 {
+    text-shadow: 2px 2px lightpink;
+}
 
-
-section ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+#main_img h2 span {
+    display: none;
 }
 
 /* section 2 */
-#menu {
-    position: relative;
+#menu h2 {
+    margin-bottom: 40px;
 }
 
 #menu li {
+    position: relative;
     overflow: hidden;
-    height: 243px;
-    width: 362px;
     border-radius: 10px;
 }
 
 #menu h3 {
-    z-index: 22;
     position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11;
     padding: 4px 8px;
     color: #fff;
     background: #777777bb;
@@ -186,14 +97,6 @@ section ul {
     transition: .5s;
 }
 
-#menu li:nth-of-type(1) {
-    margin-bottom: 27px;
-}
-
-#menu h2 {
-    margin-bottom: 48px;
-}
-
 #menu li:hover img {
     transform: scale(1.03);
 }
@@ -203,11 +106,12 @@ section ul {
 }
 
 /* section 3 */
+#event>p {
+    margin-bottom: 40px;
+}
 
-#event div {
-    overflow: hidden;
-    height: 243px;
-    width: 362px;
+#event h3 {
+    margin-top: 16px;
 }
 
 #event li {
@@ -215,25 +119,23 @@ section ul {
     border-radius: 10px;
 }
 
+#event li div {
+    flex-grow: 1;
+}
+
+#event li p:first-of-type {
+    margin: 4px 0;
+}
+
 #event li:hover {
-    border-radius: top 20px;
     box-shadow: 0px 0px 10px 0.001px rgba(0, 0, 0, 0.1);
 }
 
-#event li h3 {
-    margin: 8px;
-}
-
-#event li p {
-    margin: 8px;
-}
-
-/* 이벤트 목록 버튼 디자인 */
 #event a {
     display: block;
     background: #eee;
     text-align: center;
-    padding: 8px 0;
+    padding: 6px 0;
     margin-top: 16px;
 }
 
@@ -242,23 +144,22 @@ section ul {
 }
 
 /* section 4 */
-/* input style */
-input {
+#news input {
+    display: block;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
+    padding: 12px;
+    margin: 15px 0;
     border: 1px solid #cecece;
 }
 
-input:focus {
+#news input:focus {
     outline: none;
     border: 1px solid lightcoral;
 }
 
-/* botton style */
 button {
     padding: 12px 16px;
-    margin: 16px 0 54px;
+    margin: 20px 0 45px;
     border: none;
     background: #eee;
 }
@@ -268,7 +169,7 @@ button:hover {
 }
 
 .map {
-    height: 830px;
+    height: 540px;
 }
 
 /* footer */
@@ -277,5 +178,85 @@ footer {
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.7)), url(../images/background.jpg);
     text-align: center;
-    padding: 32px 0;
+    padding: 30px 0;
+}
+
+footer span:nth-of-type(1),
+footer span:nth-of-type(3) {
+    display: none;
+}
+
+/* 600이상 */
+@media (min-width:600px) {
+
+    /* 헤더 */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 내비게이션 */
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li:not(:first-of-type) {
+        margin-left: 36px;
+    }
+
+    nav span {
+        display: block;
+        text-indent: -999em;
+        transition: 0.3s;
+        height: 2px;
+        width: 0;
+        background: lightcoral;
+    }
+
+    /* 섹션 2~4 공통 */
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .section li {
+        width: calc(50% - 8px);
+    }
+
+    /* 섹션3 */
+    #event li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* 섹션4 */
+    .map {
+        height: 830px;
+    }
+}
+
+/* 992이상 */
+@media (min-width:992px) {
+    .section li {
+        width: calc(25% - 8px);
+        max-width: 362px;
+    }
+
+     /* 섹션 1 */
+    #main_img h2 span {
+        display:inline;
+    }
+
+    /* 섹션 2~4 공통 */
+    .section {
+        width: 1496px;
+        margin: 0 auto;
+        padding: 81px 0 0;
+    }
 }

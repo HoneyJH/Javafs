@@ -9,19 +9,42 @@ body {
     color: #000;
 }
 
-h1 {
-    font-size: 3.2rem;
+.logo {
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    font-family: 'Caveat', cursive;
+}
+
+h2, h3,nav li{
+    font-family: 'Caveat', cursive;
 }
 
 h2 {
     font-size: 2.4rem;
+    font-weight: 400;
 }
 
-h3 {
+h3,nav li {
     font-size: 1.8rem;
 }
 
 a {
     color: #000;
     text-decoration: none;
+}
+
+#main_img h2 {
+    font-size: 5.8rem;
+}
+
+/* 섹션3 */
+
+#event li p:first-of-type{
+    color: #999;
+}
+
+/* 푸터 */
+footer{
+    color: #555;
 }
