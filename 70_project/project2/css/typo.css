@@ -16,7 +16,9 @@ body {
     font-family: 'Caveat', cursive;
 }
 
-h2, h3,nav li{
+h2,
+h3,
+nav li {
     font-family: 'Caveat', cursive;
 }
 
@@ -25,8 +27,10 @@ h2 {
     font-weight: 400;
 }
 
-h3,nav li {
+h3,
+nav li {
     font-size: 1.8rem;
+    font-weight: 400;
 }
 
 a {
@@ -35,16 +39,22 @@ a {
 }
 
 #main_img h2 {
-    font-size: 5.8rem;
+    font-size: 5.6vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+::placeholder {
+    color: lightpink;
 }
 
 /* 섹션3 */
 
-#event li p:first-of-type{
+#event li p:first-of-type {
     color: #999;
 }
 
 /* 푸터 */
-footer{
+footer {
     color: #555;
 }

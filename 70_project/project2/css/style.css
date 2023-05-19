@@ -25,7 +25,7 @@ li:hover span {
 }
 
 /* section common */
-section {
+.section {
     padding: 81px 30px 0;
 }
 
@@ -50,7 +50,7 @@ footer {
 #main_img {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 80vw;
     background: url(../images/logo.png) no-repeat top/contain;
 }
 
@@ -71,6 +71,10 @@ footer {
 }
 
 /* section 2 */
+#menu {
+    padding-top: 0;
+}
+
 #menu h2 {
     margin-bottom: 40px;
 }
@@ -89,7 +93,7 @@ footer {
     padding: 4px 8px;
     color: #fff;
     background: #777777bb;
-    border-radius: 10px 0 10px;
+    border-radius: 10px 0;
     transition: .5s;
 }
 
@@ -160,7 +164,6 @@ footer {
 button {
     padding: 12px 16px;
     margin: 20px 0 45px;
-    border: none;
     background: #eee;
 }
 
@@ -169,7 +172,7 @@ button:hover {
 }
 
 .map {
-    height: 540px;
+    height: 42vw;
 }
 
 /* footer */
@@ -235,9 +238,10 @@ footer span:nth-of-type(3) {
         justify-content: space-between;
     }
 
-    /* 섹션4 */
-    .map {
-        height: 830px;
+    /* 푸터 */
+    footer span:nth-of-type(1),
+    footer span:nth-of-type(3) {
+        display: inline;
     }
 }
 
@@ -248,9 +252,17 @@ footer span:nth-of-type(3) {
         max-width: 362px;
     }
 
-     /* 섹션 1 */
+    #main_img h2 {
+        font-size: 4vw;
+    }
+
     #main_img h2 span {
-        display:inline;
+        display: inline;
+    }
+
+    /* 섹션 1 */
+    #main_img {
+        height: 40vw;
     }
 
     /* 섹션 2~4 공통 */
