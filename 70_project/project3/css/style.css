@@ -5,7 +5,7 @@
 /* header */
 h1 {
     text-align: center;
-    padding: 20px;
+    padding: 16px;
 }
 
 header>ul {
@@ -28,9 +28,18 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn , .more , .more2{
- text-align: end;
- padding: 10px;
+.btn,
+.more,
+.more2 {
+    text-align: end;
+    padding: 10px;
+}
+
+button {
+    background: lightcoral;
+    padding: 4px 8px;
+    border-radius: 15px;
+    border: 1px dashed #333;
 }
 
 /* section 1 */
@@ -39,13 +48,16 @@ h2 {
     justify-content: space-around;
     padding-bottom: 20px;
 }
-.section1 ul{
+
+.section1 ul {
     text-align: center;
 }
-.section1 li{
+
+.section1 li {
     padding: 10px;
 }
-.section1 ul>ul{
+
+.section1 ul>ul {
     justify-content: space-around;
     display: flex;
 }
@@ -63,8 +75,7 @@ h2 {
     padding-bottom: 20px;
 }
 
-.section2 li:nth-of-type(n+5):nth-of-type(-n+8)
-{
+.section2 li:nth-of-type(n+5):nth-of-type(-n+8) {
     display: none;
 }
 
@@ -84,13 +95,13 @@ h2 {
     width: calc(50% - 8px);
     padding-bottom: 20px;
 }
-.section3 li:nth-of-type(n+5):nth-of-type(-n+8)
-{
+
+.section3 li:nth-of-type(n+5):nth-of-type(-n+8) {
     display: none;
 }
 
 /* section 4 */
-.menu>li:not(.notice1){
+.menu>li:not(.notice1) {
     display: none;
 }
 
@@ -119,7 +130,29 @@ h2 {
 
 
 /* footer */
-footer{
+footer {
     text-align: center;
     padding: 20px;
+}
+
+@media (min-width:600px) {
+
+    /* section2 */
+    .section2 li:nth-of-type(n+5):nth-of-type(-n+8) {
+        display: list-item;
+    }
+
+    .section2 li{
+        width: calc(25% - 8px);
+    }
+
+    /* section 3 */
+    .section3 li:nth-of-type(n+5):nth-of-type(-n+8) {
+        display: list-item;
+    }
+
+    .section3 li{
+        width: calc(25% - 8px);
+    }
+
 }

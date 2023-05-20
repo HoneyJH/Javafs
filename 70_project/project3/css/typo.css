@@ -8,3 +8,16 @@ a {
     text-decoration: none;
     color: #000;
 }
+
+body{
+    font: 1.5vw/1.8 'Noto Sans KR', sans-serif;
+    color: #000;
+}
+
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.4rem;
+}
