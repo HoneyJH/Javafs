@@ -31,7 +31,17 @@
         var diffDate = theDate.getTime() - today.getTime();
 
         var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
-        document.write('연말 D-day: ' + result + '일 남았습니다.');
+        document.write('연말 D-day: ' + result + '일 남았습니다.','<br>');
+
+        // 학원 종강일까지 남은 일 수
+        var d = new Date();
+        var endDate = today.getFullYear();
+        var theDate = new Date(endDate, 8, 14);
+        var diffDate = theDate.getTime() - today.getTime();
+        var diffDate = theDate.getTime() - today.getTime();
+        var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
+        document.write('종강까지 D-day: ' + result + '일 남았습니다.');
+
     </script>
 </body>
 
