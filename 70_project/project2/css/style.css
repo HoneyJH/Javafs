@@ -219,6 +219,7 @@ footer span:nth-of-type(3) {
         width: 0;
         background: lightcoral;
     }
+    
 
     /* 섹션 2~4 공통 */
     .section ul {
@@ -247,6 +248,18 @@ footer span:nth-of-type(3) {
 
 /* 992이상 */
 @media (min-width:992px) {
+    
+    /* 섹션 1 */
+    #main_img {
+        height: 40vw;
+    }
+
+    /* 섹션 2~4 공통 */
+    .section {
+        width: 1496px;
+        margin: 0 auto;
+        padding: 81px 0 0;
+    }
     .section li {
         width: calc(25% - 8px);
         max-width: 362px;
@@ -260,15 +273,4 @@ footer span:nth-of-type(3) {
         display: inline;
     }
 
-    /* 섹션 1 */
-    #main_img {
-        height: 40vw;
-    }
-
-    /* 섹션 2~4 공통 */
-    .section {
-        width: 1496px;
-        margin: 0 auto;
-        padding: 81px 0 0;
-    }
 }
