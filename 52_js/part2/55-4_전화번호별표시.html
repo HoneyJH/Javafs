@@ -11,14 +11,21 @@
 <body>
     <h1>문자열 객체</h1>
     <script>
-        /* 
+        /*
             substring(index1, index2): 인덱스1부터 인덱스2 이전 구간의 문자열 반환, (단, 음수인 경우 인덱스 0을 가리킴)
             toUpperCase(): 대문자로 반환
             length: 문자열의 문자 총 개수 반환
         */
 
-        // 전화번호 뒤 4자리 '*'표시 하기
+        // 이름 대문자로 변환하기
+        const userName = prompt('영문 이름을 입력하세요', 'hongjihye');
+        const upperName = userName.toUpperCase();
+        document.write(upperName, '<br>');
 
+        // 전화번호 뒤 4자리 '*'표시 하기
+        const userNum = prompt('핸드폰 번호를 입력하세요', '010-8256-9206');
+        const subNum = userNum.substring(0, userNum.length - 4) + '****';
+        document.write(subNum, '<br>');
 
     </script>
 </body>
