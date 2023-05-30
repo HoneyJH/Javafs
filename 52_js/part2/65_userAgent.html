@@ -24,12 +24,16 @@
             location.reload(); -> 브라우저 새로 고침
 
             navigator.userAgent;
-                - 기본 플랫폼
-                - 운영체제 정보
-                - 사용중인 브라우저의 엔진 이름
-                - 사용 중인 브라우저 이름
-                - 같은 엔진을 사용 중이며 호환 가능한 다른 브라우저
+                - 기본 플랫폼: Mozilla/5.0
+                - 운영체제 정보: Windows NT 10.0; Win64; x64
+                - 사용중인 브라우저의 엔진 이름: AppleWebKit/537.36 (KHTML, like Gecko)
+                - 사용 중인 브라우저 이름: Chrome/113.0.0.0
+                - 같은 엔진을 사용 중이며 호환 가능한 다른 브라우저: Safari/537.36
+
+            Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
         */
+
+        console.log(navigator.userAgent);
 
         var info = navigator.userAgent.toLowerCase();
         var osImg = null;
@@ -44,11 +48,10 @@
             osImg = 'android.png';
         }
 
-        document.write('<img src=\'../assets/' + osImg + '\'>', '<br>');
+        document.write('<img src="../assets/' + osImg + '">', '<br>');
 
-        var scr = screen;
-        var sc_w = scr.width;
-        var sc_h = scr.height;
+        var sc_w = screen.width;
+        var sc_h = screen.height;
 
         document.write('모니터 해상도 너비:' + sc_w + 'px', '<br>');
         document.write('모니터 해상도 높이:' + sc_h + 'px', '<br>');
