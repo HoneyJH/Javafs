@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #fullpage div{
+            height: 100vh;
+        }
+        #section1{
+            background: lightcoral;
+        }
+        #section2{
+            background: lightblue;
+        }
+        #section3{
+            background: lightslategray;
+        }
+        #section4{
+            background: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <script>
+        const box = document.querySelector('.section')
+
+        box.onwheel = function (e) {
+            // 마우스 휠을 내리면 e.deltaY가 양수,아니면 음수
+            if (e.deltaY > 0) {
+                window.scrollTo( 1000,1000);
+            } else {
+                window.scrollBy( -1000,-1000);
+            }
+        };
+
+    </script>
+</body>
+</html>
