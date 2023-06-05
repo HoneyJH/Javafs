@@ -22,6 +22,7 @@
             height: 400px;
             background: red;
         }
+
         div.active{
             transform: rotate(45deg);
         }
@@ -30,14 +31,16 @@
 
 <body>
     
-    <button>클래스 추가</button>
-    <button>클래스 제거</button>
+    <button class="btn1">클래스 추가</button>
+    <button class="btn2">클래스 제거</button>
     <div></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            요소.classList.add('클래스1','클래스2', ...) ~ 요소의 클래스 추가
-            요소.classList.remove('클래스1','클래스2', ...) ~ 요소의 클래스 제거
+            $('선택자').addClass('클래스1 클래스2 ...',콜백함수) ~ 요소의 클래스 추가
+            $('선택자').removeClass('클래스1 클래스1...') ~ 요소의 클래스 제거
+            $('선택자').removeClass() ~ 요소의 모든 클래스 제거
         */
 
         /* 
@@ -49,17 +52,18 @@
             메서드: classList.add(), classList.remove()
         */
 
-        const btn1 = document.querySelectorAll('button')[0];
-        const btn2 = document.querySelectorAll('button')[1];
-        const div = document.querySelector('div');
+        const btn1 = $('.btn1');
+        const btn2 = $('.btn2');
+        const div = $('div');
 
-        btn1.onclick = function(){
-            div.classList.add('on','active');
-        }
+        btn1.click(function(){
+            div.addClass('on active');
+        });
 
-        btn2.onclick = function(){
-            div.classList.remove('on','active');
-        }
+        btn2.click(function(){
+            // div.removeClass('on active');
+            div.removeClass();
+        });
 
     </script>
 </body>

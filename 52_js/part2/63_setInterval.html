@@ -68,9 +68,11 @@
         
         // add 함수의 괄호()는 쓰지 않는다
         btn1.onclick = function () {
+            // 1초마다 add를 호출
             auto1 = setInterval(add, 1000);
         };
         btn2.onclick = function () {
+            // auto1 정지
             clearInterval(auto1);
         };
 
