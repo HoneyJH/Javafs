@@ -144,7 +144,7 @@
         // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
         document.documentElement.onscroll = function () {
             // 스크롤바를 스크롤한 양을 st에 저장
-            let st = document.documentElement.scrollTop;
+            let st = this.scrollTop;
             let stVal = 600;
             console.log(st);
 
