@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        #fullpage{
+            display: flex;
+        }
+
+        #fullpage div {
+            flex: 0 0 100%;
+            height: 100vh;
+        }
+
+        #section1 {
+            background: lightcoral;
+        }
+
+        #section2 {
+            background: lightblue;
+        }
+
+        #section3 {
+            background: lightslategray;
+        }
+
+        #section4 {
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            let elNavi = document.querySelector("#fullpage");
+            let aElSection = document.querySelectorAll(".section");
+            let curSIdx = 0;
+
+            let wheelTimer;
+            window.addEventListener("wheel", function (e) {
+                clearTimeout(wheelTimer);
+                wheelTimer = setTimeout(function () {
+                    if (e.deltaY > 0) {
+                        doScroll(++curSIdx);
+                    } else { doScroll(--curSIdx) };
+                }, 50);
+            });
+
+            function doScroll(sidx) {
+                //  조건 연산자
+                //  (조건)? 참일 때 실행할 명령 : 거짓일 때 실행할 명령
+                sidx = sidx < 0 ? 0 : sidx;
+                sidx = sidx > aElSection.length - 1 ? aElSection.length - 1 : sidx;
+
+                curSIdx = sidx;
+
+                aElSection[curSIdx].scrollIntoView({
+                    block: "start", inline: "start", behavior: "smooth"
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
