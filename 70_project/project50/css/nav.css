@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* GNB(global Navigation Bar) */
+#gnb {
+    z-index: 99;
+    position: relative;
+    height: 94px;
+}
+
+.nav_bg {
+    position: absolute;
+    left: 0;
+    top: 94px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다 */
+/* 1depth: main */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main>li {
+    /* 삼각형 모양 기준 */
+    position: relative;
+    width: 160px;
+    /* 메인,서브 메뉴 모두 텍스트 가운데 */
+    text-align: center;
+}
+
+.main>li>a {
+    position: relative;
+    display: inline-block;
+    line-height: 94px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.main>li>a:after {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    left: 0;
+    transform: scaleX(0);
+    content: '';
+    border-bottom: 2px solid #fff;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.main>li:hover>a:after {
+    transform: scaleX(1);
+}
+
+/* 2depth: sub */
+.sub {
+    display: none;
+    padding: 15px 0;
+}
+
+.sub a {
+    display: block;
+    width: 100%;
+    color: #ccc;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 3px 0px;
+}
+
+.sub a:hover {
+    color: rgb(255, 179, 0);
+}
+/* 로그인/회원가입 */
+.member a {
+    margin: 0 8px;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션바_메가커피</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #623700;
+        }
+
+        body {
+            font-size: 1.5rem;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #header{
+            display: flex;
+            background: rgb(255, 179, 0);
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .logo{
+            text-align: center;
+            letter-spacing: 0.5rem;
+            line-height: 0.7;
+        }
+        .logo b{
+            display: block;
+            font-size: 2.2rem;
+        }
+        .logo span{
+            font-size: 1.6rem;
+        }
+        /* GNB(global Navigation Bar) */
+        #gnb {
+            z-index: 99;
+            position: relative;
+            height: 94px;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 94px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다 */
+        /* 1depth: main */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main>li {
+            /* 삼각형 모양 기준 */
+            position: relative;
+            width: 160px;
+            /* height: 94px; */
+            /* 메인,서브 메뉴 모두 텍스트 가운데 */
+            text-align: center;
+        }
+
+        .main>li>a {
+            position: relative;
+            display: inline-block;
+            line-height: 94px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .main>li>a:after {
+            position: absolute;
+            width: 100%;
+            bottom: 30px;
+            left: 0;
+            transform: scaleX(0);
+            content: '';
+            border-bottom: 2px solid #fff;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+        .main>li:hover>a:after {
+            transform: scaleX(1);
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .sub a {
+            display: block;
+            width: 100%;
+            color: #ccc;
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding: 3px 0px;
+        }
+
+        .sub a:hover {
+            color: rgb(255, 179, 0);
+        }
+        /* 로그인/회원가입 */
+        .member a{
+            margin: 0 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="#"><b>MGC</b><span>메가커피</span></a></h1>
+        <!-- 서브메뉴의 배경 -->
+        <div class="nav_bg"></div>
+        <nav id="gnb">
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">동남아/대만</a></li>
+                        <li><a href="#">중국/홍콩</a></li>
+                        <li><a href="#">유럽/두바이</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">서울/경기권</a></li>
+                        <li><a href="#">충청권</a></li>
+                        <li><a href="#">전라권</a></li>
+                        <li><a href="#">경상/강원권</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">제주도</a>
+                    <ul class="sub">
+                        <li><a href="#">버스여행</a></li>
+                        <li><a href="#">자유여행</a></li>
+                        <li><a href="#">호텔/펜션</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">소식</a>
+                    <ul class="sub">
+                        <!-- 백엔드 부분이 들어갈수 있는 부분!서브로 꼭 추가할것! -->
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 로그인/회원가입 -->
+        <div class="member">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 내비게이션바
+        $('.main > li > a').mouseenter(function (e) {
+            e.preventDefault // a태그 기본 이벤트 제거
+            $('.sub').stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 160 }, 400);
+        });
+        $('header').mouseleave(function () {
+            $('.sub').stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 }, 400);
+        });
+    </script>
+</body>
+
+</html>

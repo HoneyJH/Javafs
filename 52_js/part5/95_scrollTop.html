@@ -142,9 +142,9 @@
         const txt2 = document.querySelector('.txt2');
 
         // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
-        document.documentElement.onscroll = function () {
+        document.onscroll = function () {
             // 스크롤바를 스크롤한 양을 st에 저장
-            let st = this.scrollTop;
+            let st = document.documentElement.scrollTop;
             let stVal = 600;
             console.log(st);
 

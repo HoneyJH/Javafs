@@ -2,157 +2,29 @@
 @import url(typo.css);
 @import url(reset.css);
 
-/* header */
-h1 {
+header{
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    padding: 16px;
+    margin: 0 24px;
+    line-height: 80px;
 }
 
-header>ul {
+.main{
+    display: flex;
+}
+.main li{
+    padding: 0 16px;
+}
+
+.sub{
     display: none;
 }
 
-/* nav */
-
-nav {
-    display: none;
-}
-
-/* section common */
-section {
-    padding: 20px;
-    width: 100%;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.btn,
-.more,
-.more2 {
-    text-align: end;
-    padding: 10px;
-}
-
-button {
-    background: lightcoral;
-    padding: 4px 8px;
-    border-radius: 15px;
-    border: 1px dashed #333;
-}
-
-/* section 1 */
-.section1 .ma {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 20px;
-}
-
-.section1 ul {
-    text-align: center;
-}
-
-.section1 li {
-    padding: 10px;
-}
-
-.section1 ul>ul {
-    justify-content: space-around;
+.login{
     display: flex;
 }
 
-/* section 2 */
-
-.section2 ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.section2 li {
-    width: calc(50% - 8px);
-    padding-bottom: 20px;
-}
-
-.section2 li:nth-of-type(n+5):nth-of-type(-n+8) {
-    display: none;
-}
-
-/* :is(.section2,.section3) li:nth-of-type(n+5):nth-of-type(-n+8)
-{
-    display: none;
-} */
-
-/* section 3 */
-.section3 ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.section3 li {
-    width: calc(50% - 8px);
-    padding-bottom: 20px;
-}
-
-.section3 li:nth-of-type(n+5):nth-of-type(-n+8) {
-    display: none;
-}
-
-/* section 4 */
-.menu>li:not(.notice1) {
-    display: none;
-}
-
-/* section 5 */
-.section5 ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.section5 li {
-    width: calc(50% - 8px);
-    padding-bottom: 20px;
-}
-
-/* section 6 */
-.section6 ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.section6 li {
-    width: calc(20% - 8px);
-}
-
-
-/* footer */
-footer {
-    text-align: center;
-    padding: 20px;
-}
-
-@media (min-width:600px) {
-
-    /* section2 */
-    .section2 li:nth-of-type(n+5):nth-of-type(-n+8) {
-        display: list-item;
-    }
-
-    .section2 li{
-        width: calc(25% - 8px);
-    }
-
-    /* section 3 */
-    .section3 li:nth-of-type(n+5):nth-of-type(-n+8) {
-        display: list-item;
-    }
-
-    .section3 li{
-        width: calc(25% - 8px);
-    }
-
+.login li{
+    padding: 0 8px;
 }
