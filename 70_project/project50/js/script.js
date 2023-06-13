@@ -15,13 +15,104 @@ $(function () {
     // $('video').get(0).play();
 
     // 섹션1 - 캐로셀
-    $('.bxslider').bxSlider({
-        // 자동 재생
+    const slider = $('.slider').bxSlider({
+        // mode: 'horizintal',
+        // mode: 'valtical',
+        mode: 'fade',
+        // 자동재생
         auto: true,
-        // autoControls: true, //일시정지와 재실행 버튼
+        // 컨트롤 버튼(좌우,페이저)를 클릭하면 auto 일시 정지
         stopAutoOnClick: true,
-        pager: true
-        // slideWidth: 2000
+        // 슬라이드 위에 hover하면 auto 일시 정지
+        autoHover: true,
+        // 내비게이션(인디케이터,페이저)
+        pager: false,
+        // 이전/이후 버튼
+        controls: false,
+        // 슬라이드의 전환 시간
+        speed: 400,
+        // 슬라이드의 정지되어있는 시간
+        pause: 3000,
+
+        // 슬라이드 전환 직전에 autoPager() 함수를 호출하여 동작 시킴
+        onSlideBefore: function () {
+            autoPager();
+        },
+        // 슬라이드 전환 직후 txtMotion() 함수를 호출하여 동작 시킴
+        onSlideAfter: function () {
+            titMotion();
+        }
+    });
+
+    function titMotion() {
+        // 슬라이드 전환 직후의 텍스트 모션
+        $('#slideWrap .slider li div').animate({ top: 0, opacity: 1 });
+    }
+
+    function autoPager() {
+        // 페이저의 이미지 변경
+        // 페이저 a태그의 active 클래스를 모두 제거
+        $('#slideWrap .pager a').removeClass('active');
+        // 현재 슬라이드 번호를 가져와서 currentIdx에 저장
+        let currentIdx = slider.getCurrentSlide();
+        $('#slideWrap .pager a').eq(currentIdx).addClass('active');
+
+        // 슬라이드 전환 직전의 텍스트 모션
+        $('#slideWrap .slider li div').css({ top: 100, opacity: 0 });
+    }
+
+    // 페이저 버튼
+    $('#slideWrap .pager a').click(function (e) {
+        // a태그의 기본이벤트 제거
+        e.preventDefault();
+        let idx = $(this).index();
+        // idx 번호에 해당하는 위치로 슬라이드가 이동
+        slider.goToSlide(idx);
+        return false;
+    });
+
+    // 이전 버튼
+    $('#slideWrap #prev').click(function (e) {
+        // a태그의 기본이벤트 제거
+        e.preventDefault();
+        // 이전 슬라이드로 이동
+        slider.goToPrevSlide();
+        autoPager();
+        return false;
+    });
+    // 이후 버튼
+    $('#slideWrap #next').click(function (e) {
+        e.preventDefault();
+        // 다음 슬라이드로 이동
+        slider.goToNextSlide();
+        autoPager();
+        return false;
+    });
+
+    // 섹션 2
+    const sec2 = $('#section2'),
+    btn = sec2.find('.btn'),
+    txt1 = sec2.find('.txt1'),
+    txt2 = sec2.find('.txt2');
+
+    // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
+    $(window).scroll(function () {
+        // 스크롤바를 스크롤한 양을 st에 저장
+        let st = document.documentElement.scrollTop;
+        let stVal = 600;
+        console.log(st);
+
+        if (st >= stVal) {
+            // css(속성, 값)
+            // css({속성: 값, 속성: 값, ...})
+            btn.css({opacity : 1})
+            txt1.css({left:360});
+            txt2.css({left:360});
+            } else {
+            btn.css({opacity:0});
+            txt1.css({left:-800});
+            txt2.css({left:-400});
+        }
     });
 
     // 풀페이지 레이아웃
@@ -49,7 +140,7 @@ $(function () {
                 if (e.deltaY > 0) {
                     doScroll(++curSIdx);
                 } else { doScroll(--curSIdx) };
-            }, 50);
+            }, 200);
         };
 
         function doScroll(sidx) {
