@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff');
+        }
+
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 1.5rem/1.6 'MaruBuri-Regular';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 탭 메뉴 */
+
+        /* 탭 메뉴 - 버튼 */
+        #tabs .tabBtns {
+            display: flex;
+        }
+
+        #tabs .tabBtns li {
+            margin-bottom: 8px;
+            padding: 4px 16px;
+            background: lightpink;
+        }
+
+        #tabs .tabBtns li a {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #000;
+        }
+
+        #tabs .tabBtns li.on {
+            background: lightblue;
+        }
+
+        #tabs .tabBtns li.on a {
+            color: #fff;
+        }
+
+        /* 탭 메뉴 - 내용 */
+        #tabs>div {
+            display: none;
+            background: red;
+        }
+
+        /* on클래스가 있는 것만 보임 */
+        #tabs>div.on {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <!-- 제목/버튼 -->
+        <ul class="tabBtns">
+            <li class="on"><a href="#tab1">탭1</a></li>
+            <li><a href="#tab2">탭2</a></li>
+            <li><a href="#tab3">탭3</a></li>
+            <li><a href="#tab4">탭4</a></li>
+        </ul>
+
+        <!-- 탭1 내용 -->
+        <div id="tab1" class="on">
+            <h2>탭1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae distinctio tempore tenetur quisquam
+                dolores, aliquid placeat aperiam mollitia? Consequuntur nemo ullam eius consectetur corrupti! Assumenda
+                porro iste saepe aspernatur iusto!</p>
+        </div>
+
+        <!-- 탭2 내용 -->
+        <div id="tab2">
+            <h2>탭2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- 탭3 내용 -->
+        <div id="tab3">
+            <h2>탭3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at architecto veniam nobis porro
+                laboriosam, repellendus sint odio adipisci tempora esse, officiis, voluptate possimus officia? Autem
+                quidem error doloribus culpa.</p>
+        </div>
+
+        <!-- 탭4 내용 -->
+        <div id="tab4">
+            <h2>탭4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dicta dolor tempora quo voluptatum ad?
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        /* 
+            탭1을 클릭하면 탭1 내용을 화면에 표시
+            탭2을 클릭하면 탭2 내용을 화면에 표시
+
+            이벤트: onclick
+            메서드: classList.add(), classList.remove()
+            속성: previousSibling, nextSibling
+            키워드: this
+        */
+        const tabBtn = document.querySelectorAll('.tabBtns li');
+        const tabCont = document.querySelectorAll('#tabs > div');
+        /* 
+            const 배열 = [];
+            
+            for (let idx = 0; idx < 배열.length; idx++){
+                요소[idx].style.color = 'red';
+            }
+            for (let idx in 배열){
+                요소[idx].style.color = 'red';
+            }
+            for (let 변수 in 객체){코드} -> 주로 배열
+            for (let 변수 of 객체){코드} -> NodeList
+        */
+
+        // tabBtn를 클릭하면 함수 실행
+        // for (let i = 0; i < tabBtn.length; i++) {
+        //     tabBtn[i].onclick = function () {
+        //         for (let j = 0; j < tabBtn.length; j++) {
+        //             tabBtn[j].classList.remove('on');
+        //             tabCont[j].classList.remove('on');
+        //         }
+        //         this.classList.add('on');
+        //         tabCont[i].classList.add('on');
+        //     };
+        // }
+        for (let i = 0; i < tabBtn.length; i++) {
+            tabBtn[i].onclick = function () {
+                // ele -> tabBtn[0] ~ tabBtn[3]
+                for (let ele of tabBtn) {
+                    ele.classList.remove('on');
+                }
+                this.classList.add('on');
+                for (let ele of tabCont) {
+                    ele.classList.remove('on');
+                }
+                tabCont[i].classList.add('on');
+            };
+        }
+    </script>
+</body>
+
+</html>

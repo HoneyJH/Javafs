@@ -248,3 +248,148 @@
     background: blue;
     transform: rotate(18deg);
 }
+
+/* 섹션3 */
+#section3{
+    position: relative;
+}
+#section3 .innerWrap {
+    position: absolute;
+    width: 1460px;
+    height: 660px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* thumbnail image */
+#section3 .thumb {
+    position: absolute;
+    left: 0;
+    width: 360px;
+}
+
+#section3 .thumb li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#section3 .thumb li img {
+    width: 110px;
+}
+
+#section3 .thumb li:nth-of-type(1).active {
+    border-bottom: 2px solid #ff2525;
+    font-size: 2.2rem;
+    color: #ff2525;
+}
+
+#section3 .thumb li:nth-of-type(2).active {
+    border-bottom: 2px solid #ffa500;
+    font-size: 2.2rem;
+    color: #ffa500;
+}
+
+#section3 .thumb li:nth-of-type(3).active {
+    border-bottom: 2px solid #229200;
+    font-size: 2.2rem;
+    color: #229200;
+}
+
+#section3 .thumb li:nth-of-type(4).active {
+    border-bottom: 2px solid #2e6dff;
+    font-size: 2.2rem;
+    color: #2e6dff;
+}
+
+#section3 .thumb li:nth-of-type(5).active {
+    border-bottom: 2px solid #c251ff;
+    font-size: 2.2rem;
+    color: #c251ff;
+}
+
+#section3 .thumb span {
+    margin-left: 20px;
+}
+
+/* 큰 이미지 갤러리 */
+#section3 .big {
+    position: absolute;
+    left: 400px;
+    top: 0;
+    width: 580px;
+    height: 660px;
+    overflow: hidden;
+}
+
+#section3 .big li {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    /* display 속성은 transtion 효과가 적용되지 않는다 */
+    /* transition: .3s; */
+}
+
+#section3 .big li.active {
+    display: block;
+}
+
+#section3 .big li:first-child {
+    left: 0;
+}
+
+/* 텍스트 애니메이션 */
+#section3 .txt {
+    position: absolute;
+    left: 980px;
+    width: 410px;
+    margin-left: 70px;
+}
+
+#section3 .txt li {
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    transition: .3s;
+}
+
+#section3 .txt li.active {
+    top: 0;
+    opacity: 1;
+}
+
+#section3 .txt h2 {
+    margin-bottom: 50px;
+    color: #005295;
+    font-size: 2.9rem;
+}
+
+#section3 .txt h3 {
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: -3.5px;
+}
+
+#section3 .txt p {
+    margin: 0 0 30px 100px;
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-weight: 200;
+    font-family: 'Arita-dotum-Regular', sans-serif;
+}
+
+#section3 .txt button {
+    margin-left: 100px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}

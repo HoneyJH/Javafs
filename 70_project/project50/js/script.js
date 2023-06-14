@@ -115,6 +115,21 @@ $(function () {
         }
     });
 
+    // 섹션3
+    const tabBtn = $('#section3 .thumb li'),
+            bigImg = $('#section3 .big li'),
+            txt = $('#section3 .txt li');
+
+        tabBtn.click(function(){
+            let idx = $(this).index();
+            tabBtn.removeClass('active');
+            bigImg.removeClass('active');
+            txt.removeClass('active');
+            $(this).addClass('active');
+            bigImg.eq(idx).addClass('active');
+            txt.eq(idx).addClass('active');
+        });
+
     // 풀페이지 레이아웃
     /* $('.section').mousewheel(function (e, delta) {
         let prev;
@@ -128,6 +143,7 @@ $(function () {
             $('html').stop().animate({ scrollTop: next }, 400, 'easeOutExpo');
         }
     }); */
+    // 풀페이지 레이아웃
     window.onload = function () {
         let elNavi = document.querySelector("#fullpage");
         let aElSection = document.querySelectorAll(".section");
