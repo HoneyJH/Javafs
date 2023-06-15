@@ -91,9 +91,9 @@ $(function () {
 
     // 섹션 2
     const sec2 = $('#section2'),
-    btn = sec2.find('.btn'),
-    txt1 = sec2.find('.txt1'),
-    txt2 = sec2.find('.txt2');
+        btn = sec2.find('.btn'),
+        txt1 = sec2.find('.txt1'),
+        txt2 = sec2.find('.txt2');
 
     // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
     $(window).scroll(function () {
@@ -105,31 +105,66 @@ $(function () {
         if (st >= stVal) {
             // css(속성, 값)
             // css({속성: 값, 속성: 값, ...})
-            btn.css({opacity : 1})
-            txt1.css({left:360});
-            txt2.css({left:360});
-            } else {
-            btn.css({opacity:0});
-            txt1.css({left:-800});
-            txt2.css({left:-400});
+            btn.css({ opacity: 1 })
+            txt1.css({ left: 360 });
+            txt2.css({ left: 360 });
+        } else {
+            btn.css({ opacity: 0 });
+            txt1.css({ left: -800 });
+            txt2.css({ left: -400 });
         }
     });
 
     // 섹션3
     const tabBtn = $('#section3 .thumb li'),
-            bigImg = $('#section3 .big li'),
-            txt = $('#section3 .txt li');
+        bigImg = $('#section3 .big li'),
+        txt = $('#section3 .txt li');
 
-        tabBtn.click(function(){
-            let idx = $(this).index();
-            tabBtn.removeClass('active');
-            bigImg.removeClass('active');
-            txt.removeClass('active');
-            $(this).addClass('active');
-            bigImg.eq(idx).addClass('active');
-            txt.eq(idx).addClass('active');
-        });
+    tabBtn.click(function () {
+        let idx = $(this).index();
+        tabBtn.removeClass('active');
+        bigImg.removeClass('active');
+        txt.removeClass('active');
+        $(this).addClass('active');
+        bigImg.eq(idx).addClass('active');
+        txt.eq(idx).addClass('active');
+    });
 
+    // 섹션4
+    const txtTop = $('.top');
+    const txtTopSpan = txtTop.find('span');
+    const txtBtm = $('.btm');
+    const txtBtmSpan = txtBtm.find('span');
+
+    txtTopSpan.clone().appendTo(txtTop);
+    txtBtmSpan.clone().appendTo(txtBtm);
+
+    // 호버 페이드 효과
+    const inner = $('.container > div');
+    const fade = inner.find('.fade');
+    let cnt = 0, idx, timer;
+
+    // fade에 마우스를 올리면 함수 실행
+    fade.mouseenter(function () {
+        // 마우스를 올린 fade의 부모의 인덱스 번호를 idx에 저장
+        // 왼쪽은 0, 오른쪽은 1
+        idx = $(this).parent().index();
+        // 2초마다 fadeFn함수를 호출
+        timer = setInterval(fadeFn, 1000);
+    });
+    // fade에서 마우스가 벗어나면 함수 실행
+    fade.mouseleave(function () {
+        // setInterval 정지
+        clearInterval(timer);
+    });
+
+    function fadeFn() {
+        cnt++;
+        if (cnt > 2) {
+            cnt = 0;
+        }
+        inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
+    };
     // 풀페이지 레이아웃
     /* $('.section').mousewheel(function (e, delta) {
         let prev;
