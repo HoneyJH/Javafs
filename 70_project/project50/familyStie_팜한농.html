@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패밀리사이트_팜한농</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 패밀리사이트 */
+        .fs {
+            position: absolute;
+            top: 200px;
+            width: 240px;
+            height: 50px;
+        }
+
+        .fs button {
+            width: 240px;
+            height: 50px;
+            background: #494949;
+            border: 1px solid #676767;
+            color: #b9b9b9;
+        }
+
+        .fs i {
+            margin-left: 40px;
+        }
+
+        .fs ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            background: #494949;
+            border: 1px solid #676767;
+            border-bottom: none;
+            padding: 15px 40px;
+        }
+
+        .fs ul a {
+            color: #b9b9b9;
+            line-height: 2;
+        }
+
+        /* 푸터 */
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 70px 80px 70px 330px;
+            background: #2c2d2f url(images/logo.png) no-repeat 80px 50%/10%;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        #footer .bnb ul {
+            display: flex;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        #footer .bnb ul a {
+            color: #fff;
+        }
+
+        #footer .bnb li::after {
+            content: '|';
+            margin: 0 16px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        #footer .copy {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>패밀리사이트</h1>
+
+    <div class="fs">
+        <button type="button">관련 사이트 열기<i class="fa-solid fa-plus"></i></button>
+        <ul>
+            <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
+            <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
+            <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function () {
+            const fs = $('.fs');
+            const fsBtn = fs.find('button');
+            const fsLst = fs.find('ul');
+            const fsIcon = fs.find('i');
+
+            let state = 0;
+            fsBtn.click(function () {
+                // $('.fs ul').toggle();
+
+                /* 
+                    효과 메서드
+                    hide()
+                    show()
+                    toggle() 두 가지 상태를 번갈아 반복
+
+                    fadeIn()
+                    fadeOut()
+                    fadeTo()
+                    fadeToggle()
+
+                    slideDown()
+                    slideUp()
+                    slideToggle()
+
+                    animate()
+                    stop()
+                */
+                fsLst.slideToggle();
+
+                /* 삼각형 모양 바꾸기 */
+                if (state == 0) {
+                    // attr = html속성
+                    // css = css속성
+                    // fsIcon.attr({ class: 'fa-solid fa-minus' });
+                    fsBtn.html('관련 사이트 닫기<i class="fa-solid fa-minus"></i>')
+                    state = 1;
+                } else {
+                    // fsIcon.attr({ class: 'fa-solid fa-plus' });
+                    fsBtn.html('관련 사이트 열기<i class="fa-solid fa-plus"></i>')
+                    state = 0;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

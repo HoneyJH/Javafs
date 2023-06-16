@@ -11,6 +11,22 @@ $(function () {
         $('.nav_bg').stop().animate({ height: 0 }, 400);
     });
 
+    // 헤더
+    const headerBg = $('#header');
+
+    // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
+    $(window).scroll(function () {
+        // 스크롤바를 스크롤한 양을 st에 저장
+        let st = $(this).scrollTop();
+        let stVal = 600;
+
+        if (st >= stVal) {
+            headerBg.css({ background: '#888' })
+        } else {
+            headerBg.css({ background: 'transparent' })
+        }
+    });
+
     // 섹션1 - 비디오 자동플레이
     // $('video').get(0).play();
 
@@ -98,7 +114,7 @@ $(function () {
     // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
     $(window).scroll(function () {
         // 스크롤바를 스크롤한 양을 st에 저장
-        let st = document.documentElement.scrollTop;
+        let st = $(this).scrollTop();
         let stVal = 600;
         console.log(st);
 
@@ -165,8 +181,34 @@ $(function () {
         }
         inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
     };
+
+    // 패밀리사이트
+    const fs = $('#footer .fs');
+    const fsBtn = fs.find('button');
+    const fsLst = fs.find('ul');
+    const fsIcon = fs.find('i');
+
+    let state = 0;
+    fsBtn.click(function (e) {
+        e.preventDefault()
+        fsLst.slideToggle();
+
+        /* 삼각형 모양 바꾸기 */
+        if (state == 0) {
+            // attr = html속성
+            // css = css속성
+            // fsIcon.attr({ class: 'fa-solid fa-minus' });
+            fsBtn.html('관련 사이트 닫기<i class="fa-solid fa-minus"></i>')
+            state = 1;
+        } else {
+            // fsIcon.attr({ class: 'fa-solid fa-plus' });
+            fsBtn.html('관련 사이트 열기<i class="fa-solid fa-plus"></i>')
+            state = 0;
+        }
+    });
+
     // 풀페이지 레이아웃
-    /* $('.section').mousewheel(function (e, delta) {
+/*     $('.section').mousewheel(function (e, delta) {
         let prev;
         if (delta > 0) {
             prev = $(this).prev().offset().top;

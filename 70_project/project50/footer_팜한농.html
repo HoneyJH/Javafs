@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer - 팜한농</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 초기화 */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #eee;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 70px 80px 70px 330px;
+            background: #555 url(images/logo.png) no-repeat 80px 50%/10%;
+            color: #eee;
+        }
+
+        .leftCont>div {
+            padding: 10px;
+        }
+
+        #footer .bnb ul {
+            display: flex;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .bnb li:not(li:last-of-type)::after {
+            content: '|';
+            margin: 8px;
+            font-size: 2.3rem;
+            line-height: 1;
+        }
+
+        .addr p span:not(span:last-of-type):after {
+            content: '|';
+            margin: 8px;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        /* 패밀리사이트 */
+        .fs {
+            position: absolute;
+            right: 400px;
+            top: 150px;
+            width: 240px;
+            height: 50px;
+        }
+        
+        .fs .fsBtn {
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            width: 240px;
+            height: 50px;
+            background: #494949;
+            border: 1px solid #676767;
+            color: #b9b9b9;
+        }
+        
+        .fs i {
+            margin-left: 40px;
+        }
+        
+        .fs ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            background: #494949;
+            border: 1px solid #676767;
+            border-bottom: none;
+            padding: 15px 40px;
+        }
+        .fs ul a {
+            color: #b9b9b9;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer">
+        <div class="leftCont">
+            <div class="bnb">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                </ul>
+            </div>
+            <div class="addr">
+                <p>서울특별시 마포구 독막로28길 10</p>
+                <p><span>대표자:홍지혜</span><span>사업자번호:898-87-00897</span><span>전화:010-8256-9206</span></p>
+            </div>
+            <div class="copy">ⓒ2023 종합유기견보호센터. ALL RIGHTS RESERVED.</div>
+        </div>
+        <div class="fs">
+            <a href="#" class="fsBtn">관련 사이트 열기<i class="fa-solid fa-plus"></i></a>
+            <ul>
+                <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
+                <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
+                <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+            $(function () {
+            const fs = $('.fs');
+            const fsBtn = fs.find('button');
+            const fsLst = fs.find('ul');
+            const fsIcon = fs.find('i');
+
+            let state = 0;
+            fsBtn.click(function () {
+                // $('.fs ul').toggle();
+
+                /* 
+                    효과 메서드
+                    hide()
+                    show()
+                    toggle() 두 가지 상태를 번갈아 반복
+
+                    fadeIn()
+                    fadeOut()
+                    fadeTo()
+                    fadeToggle()
+
+                    slideDown()
+                    slideUp()
+                    slideToggle()
+
+                    animate()
+                    stop()
+                */
+                fsLst.slideToggle();
+
+                /* 삼각형 모양 바꾸기 */
+                if (state == 0) {
+                    // attr = html속성
+                    // css = css속성
+                    // fsIcon.attr({ class: 'fa-solid fa-minus' });
+                    fsBtn.html('관련 사이트 닫기<i class="fa-solid fa-minus"></i>')
+                    state = 1;
+                } else {
+                    // fsIcon.attr({ class: 'fa-solid fa-plus' });
+                    fsBtn.html('관련 사이트 열기<i class="fa-solid fa-plus"></i>')
+                    state = 0;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

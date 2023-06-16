@@ -25,7 +25,7 @@ body {
     background: #FEC401;
 }
 
-#footer {
+#fullpage #footer  {
+    height: auto;
     background: #111;
-    padding: 100px 0;
 }
