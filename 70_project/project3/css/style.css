@@ -2,29 +2,74 @@
 @import url(typo.css);
 @import url(reset.css);
 
+/* header */
 header{
+    width: 100%;
+}
+
+.submenu1>ul{
+    /* background: #000; */
     display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0 24px;
-    line-height: 80px;
+    justify-content: end;
+    margin-right: 100px;
+}
+.submenu1>ul>li{
+padding: 24px 12px 12px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: lightblue;
+    height: 90px;
 }
 
 .main{
     display: flex;
 }
-.main li{
-    padding: 0 16px;
-}
 
 .sub{
-    display: none;
+    padding: 0 24px;
+    font-size: 2rem;
 }
 
-.login{
+.section1{
+
+    background: #68BA92;
+}
+
+.section1>div{
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/* .section2 */
+
+.section2{
+width: 100%;
+background: lightcoral;
+}
+
+.loginView{
+    width: 1320px;
+    margin: 0 auto;
+    background: lightblue;
     display: flex;
 }
 
-.login li{
-    padding: 0 8px;
+.loginView > .view{
+    background: #000;
+    width: 800px;
+    height: 400px;
+    margin-right: 20px;
 }
+
+/* section3 */
+
+.section3{
+    width: 100%;
+    background: lightgreen;
+    height: 300px;
+}
+

@@ -5,354 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/3396824a06.js" crossorigin="anonymous"></script>
     <title>유기동물 보호 센터</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header>
-        <h1><a href="#">유기동물 보호센터</a></h1>
-        <div class="nav_bg"></div>
-        <nav id="gnb">
-            <ul class="main">
+        <div class="submenu1">
+            <ul>
                 <li>
-                    <a href="#">찾는중</a>
-                    <ul class="sub">
-                        <li><a href="#">서브1</a></li>
-                        <li><a href="#">서브2</a></li>
-                        <li><a href="#">서브3</a></li>
-                        <li><a href="#">서브4</a></li>
-                    </ul>
+                    <form action="#" class="search">
+                        <input class="searchInput" type="text" value="검색어 입력">
+                        <button class="searchBtn">버튼</button>
+                    </form>
                 </li>
-                <li>
-                    <a href="#">보호중</a>
-                    <ul class="sub">
-                        <li><a href="#">서브1</a></li>
-                        <li><a href="#">서브2</a></li>
-                        <li><a href="#">서브3</a></li>
-                        <li><a href="#">서브4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">보호소</a>
-                    <ul class="sub">
-                        <li><a href="#">서브1</a></li>
-                        <li><a href="#">서브2</a></li>
-                        <li><a href="#">서브3</a></li>
-                        <li><a href="#">서브4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">커뮤니티</a>
-                    <ul class="sub">
-                        <li><a href="#">서브1</a></li>
-                        <li><a href="#">서브2</a></li>
-                        <li><a href="#">서브3</a></li>
-                        <li><a href="#">서브4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">자원봉사&후원요청</a>
-                    <ul class="sub">
-                        <li><a href="#">서브1</a></li>
-                        <li><a href="#">서브2</a></li>
-                        <li><a href="#">서브3</a></li>
-                        <li><a href="#">서브4</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">English</a></li>
             </ul>
+        </div>
+        <nav>
+            <h2><a href="#">유기동물 보호센터</a></h2>
+            <ul class="main">
+                <li class="sub"><a href="#">찾는중</a></li>
+                <li class="sub"><a href="#">보호중</a></li>
+                <li class="sub"><a href="#">보호소</a></li>
+                <li class="sub"><a href="#">커뮤니티</a></li>
+                <li class="sub"><a href="#">자원봉사&후원요청</a></li>
+            </ul>
+            <button>메뉴</button>
         </nav>
-        <ul class="login">
-            <li><input type="text"> <i class="fa-solid fa-magnifying-glass"></i></input></li>
-            <li><a href="#">Login</a></li>
-        </ul>
     </header>
     <section class="section1">
-        <div>
-            <ul class="ma">
-                <li><a href="#">찾습니다<br>19,298</a></li>
-                <li><a href="#">찾았어요<br>14,643</a></li>
-                <li><a href="#">현재 보호중<br>12,643</a></li>
-                <li><a href="#">분양 완료<br>16,653</a></li>
-                <li><a href="#">무료분양중<br>11,643</a></li>
-            </ul>
-        </div>
-
-        <div><img src="https://dummyimage.com/1100x600&text=+" alt="도메인"></div>
-
-        <div>
-            <ul class="mn">
-                <li class="bg">유기동물 찾는 방법</li>
-                <ul>
-                    <li><a href="#">실종 동물 등록<br>& 빠른 전단지 작성</a></li>
-                    <li><a href="#">보호중인 유기동물<br>리스트 확인</a></li>
-                    <li><a href="#">실종지역<br>유기동물 보호소 확인</a></li>
-                </ul>
-            </ul>
-        </div>
+        <div><img src="images/image 11.png" alt=""></div>
     </section>
-
     <section class="section2">
-        <h2>실종 동물 찾습니다!</h2>
-        <div class="btn">
-            <button type="submit">등록하기<i class="fa-solid fa-pencil"></i></button>
+        <div class="loginView">
+            <ul class="view">
+                <li></li>
+            </ul>
+            <div>
+                <h3>로그인으로 <span>유기동물보호센터</span>를 이용하세요</h3>
+                <label for="loginId">아아디
+                    <input type="text" id="loginId" placeholder="아이디를 입력하세요">
+                </label>
+                <label for="loginPw">비밀번호
+                    <input type="text" id="loginPw" placeholder="비밀번호를 입력하세요">
+                    <button>로그인</button>
+                </label>
+                <div>
+                    <button>ID/PW 찾기</button>
+                    <button>회원가입</button>
+                </div>
+            </div>
         </div>
-        <ul>
-            <li>
-                <img src="https://dummyimage.com/362x243&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다1</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="dog1">
-                <div>
-                    <h3>강아지를 찾습니다</h3>
-                    <p>지역:제주<br>
-                        종류:강아지<br>
-                        사례금:1,000,000원</p>
-                </div>
-            </li>
-        </ul>
-        <div class="more"><a href="#">자세히보기<i class="fa-solid fa-chevron-right"></i></a></div>
     </section>
-
 
     <section class="section3">
-        <h2>유기동물 보호중입니다!</h2>
-        <div class="btn"><button type="submit">등록하기<i class="fa-solid fa-pencil"></i></button></div>
-        <ul>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="cat">
-                <h3>강아지를 보호중입니다</h3>
-                <p>지역:제주<br>
-                    종류:고양이</p>
-            </li>
-        </ul>
-        <div class="more"><a href="#">자세히보기<i class="fa-solid fa-chevron-right"></i></a></div>
+        패럴렉스 이미지
     </section>
 
-    <section class="section4">
-        <h2>커뮤니티</h2>
-        <div>
-            <ul class="menu">
-                <li class="notice1">
-                    <a href="#">공지사항</a>
-                    <ul class="list">
-                        <li><a href="#">♡ 유기견보호센터 전국종합 유기견분양센터 오픈 ♡</a></li>
-                        <li><a href="#">안락사방지! 유기동물을 발견하셨을때</a></li>
-                        <li><a href="#">종합유기견보호센터 상담문의 관련 공지</a></li>
-                        <li><a href="#">자원봉사&후원요청 코너가 개설되었습니다~♡</a></li>
-                        <li><a href="#">반려동물 전단지 작성 무료입니다!</a></li>
-                    </ul>
-                </li>
-                <li class="notice2">
-                    <a href="#">펫도우미</a>
-                    <select name="" id="">
-                        <option value="">서울</option>
-                        <option value="">경기</option>
-                        <option value="">제주</option>
-                    </select>
-                    <ul class="list">
-                        <li><a href="#"> 경기/펫시터 구해요</a></li>
-                        <li><a href="#"> 경기/아이 잘 돌봐주실 분</a></li>
-                        <li><a href="#"> 경기/도움이 필요해요</a></li>
-                        <li><a href="#"> 경기/잠깐 돌봐주실분!!</a></li>
-                    </ul>
-                </li>
-                <li class="notice3">
-                    <a href="#">찾은후기</a>
-                    <ul class="list">
-                        <li><a href="#">드디어 찾았습니다ㅜㅜ</a></li>
-                        <li><a href="#">도움 주신분 감사합니다!!</a></li>
-                        <li><a href="#">강냉이 찾았습니다</a></li>
-                        <li><a href="#">찾았어요ㅜㅜ</a></li>
-                    </ul>
-                </li>
-                <li class="notice4">
-                    <a href="#">지식정보</a>
-                    <ul class="list">
-                        <li><a href="#">멍뭉이 지식정보</a></li>
-                        <li><a href="#">냥이 지식정보</a></li>
-                        <li><a href="#">기타 동물 지식정보</a></li>
-                    </ul>
-                </li>
-                <li class="notice5">
-                    <a href="#">봉사&후원</a>
-                    <select name="" id="">
-                        <option value="">서울</option>
-                        <option value="">경기</option>
-                        <option value="">제주</option>
-                    </select>
-                    <ul class="list">
-                        <li><a href="#">도움이 필요합니다</a></li>
-                        <li><a href="#">보금자리 마련이 필요합니다</a></li>
-                        <li><a href="#">보호소 좀 도와주세요</a></li>
-                        <li><a href="#">후원이 필요합니다ㅜ </a></li>
-                    </ul>
-                </li>
-                <li class="notice6">
-                    <a href="#">보호센터</a>
-                    <ul class="list">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </div>
-
-        <div class="more2"><a href="#">더보기<i class="fa-solid fa-chevron-right"></i></a></div>
-    </section>
-
-    <section class="section5">
-        <h2>무료분양</h2>
-        <div class="btn"><button type="submit">등록하기<i class="fa-solid fa-pencil"></i></button></div>
-        <ul>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="pet">
-                <h3>분양중입니다</h3>
-                <p>지역:제주<br>
-                    종류:강아지</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="pet">
-                <h3>분양중입니다</h3>
-                <p>지역:제주<br>
-                    종류:강아지</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="pet">
-                <h3>분양중입니다</h3>
-                <p>지역:제주<br>
-                    종류:강아지</p>
-            </li>
-            <li>
-                <img src="https://dummyimage.com/360x240&text=+" alt="pet">
-                <h3>분양중입니다</h3>
-                <p>지역:제주<br>
-                    종류:강아지</p>
-            </li>
-        </ul>
-        <div class="more2"><a href="#">더보기<i class="fa-solid fa-chevron-right"></i></a></div>
-    </section>
-
-    <section class="section6">
-        <h2>보호센터</h2>
-        <ul>
-            <li><a href="#"><img src="https://dummyimage.com/240x300&text=+" alt="pet"></a></li>
-            <li><a href="#"><img src="https://dummyimage.com/240x300&text=+" alt="pet"></a></li>
-            <li><a href="#"><img src="https://dummyimage.com/240x300&text=+" alt="pet"></a></li>
-            <li><a href="#"><img src="https://dummyimage.com/240x300&text=+" alt="pet"></a></li>
-            <li><a href="#"><img src="https://dummyimage.com/240x300&text=+" alt="pet"></a></li>
-        </ul>
-        <div class="more2"><a href="#">더보기<i class="fa-solid fa-chevron-right"></i></a></div>
-    </section>
-
-    <footer>
-        <h2>유기 동물 보호센터</h2>
-        <a href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a>
-        <p>&copy;2023 유기동물보호소. All rights reserved.</p>
-    </footer>
 
 </body>
 
